@@ -43,7 +43,7 @@ rs = '\033[0;0m'
 
 c = requests.session()
 a=0
-url = "https://www.999doge.com/api/web.aspx"
+url = "https://999Dice.org/api"
 ua = {
  "Origin": "file://",
  "user-agent":  "okhttp/4.2.2",
@@ -328,7 +328,7 @@ def dice(ws,ls):
    except:
      print ("")
      sys.exit()
-r = c.get(url,headers=ua,data={"a": "Login","Key": "fbc86dda2b824276b5984bc87d612b5c","Username": obj["Account"]["Username"],"Password": obj["Account"]["Password"],"Totp": ""})
+r = c.get(url,headers=ua,data={"a": "Login","Key": "6693e7ef15d74173da362f5c","Username": obj["Account"]["Username"],"Password": obj["Account"]["Password"],"Totp": ""})
 js = json.loads(r.text)
 try:
   print (hijau+"Balance "+abu2+": "+res+str(float(js["Doge"]["Balance"])/(10 ** 8)))
